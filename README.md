@@ -32,12 +32,24 @@ If CH3/CH4 really switch to Control Tone PHONO and Serato is still silent, the l
 
 ## Quick start
 
+**Build from source** (no Gatekeeper fight):
+
 ```bash
 xcode-select --install   # once, if clang / make are missing
 make
 ./ddj-sz-routing status  # read current USB routing (no write)
 ./ddj-sz-routing         # apply DVS: CH3 + CH4 → Control Tone PHONO
 ```
+
+**Or download the Apple Silicon binary** from [Releases](https://github.com/kapwebdr/pioneer-ddj-sz-mac-os-tahoe-silicon/releases) (`ddj-sz-routing-macos-arm64`, v0.0.1). It is not notarized. macOS will likely block it.
+
+```bash
+chmod +x ddj-sz-routing-macos-arm64
+xattr -d com.apple.quarantine ddj-sz-routing-macos-arm64
+./ddj-sz-routing-macos-arm64 status
+```
+
+If macOS still says the file is damaged or cannot be opened: **System Settings → Privacy & Security → Open Anyway**, or build with `make` instead. Compiling locally is the clean path.
 
 Then: Serato DJ Pro → **Setup** → **CD/Vinyl**. Control vinyl on a deck wired to **CH3 PHONO** (and CH4 if you use two DVS decks). Spin. Calibrate.
 
@@ -222,12 +234,24 @@ Si CH3/CH4 sont vraiment en Control Tone PHONO et que Serato reste muet, le rest
 
 ### Utilisation
 
+**Compiler** (évite Gatekeeper) :
+
 ```bash
 xcode-select --install   # une fois, si clang / make manquent
 make
 ./ddj-sz-routing status  # lecture du routage USB (aucune écriture)
 ./ddj-sz-routing         # DVS : CH3 + CH4 → Control Tone PHONO
 ```
+
+**Ou télécharger le binaire Apple Silicon** dans [Releases](https://github.com/kapwebdr/pioneer-ddj-sz-mac-os-tahoe-silicon/releases) (`ddj-sz-routing-macos-arm64`, v0.0.1). Il n’est pas notarié. macOS va probablement le bloquer.
+
+```bash
+chmod +x ddj-sz-routing-macos-arm64
+xattr -d com.apple.quarantine ddj-sz-routing-macos-arm64
+./ddj-sz-routing-macos-arm64 status
+```
+
+Si macOS dit que le fichier est endommagé ou ne peut pas s’ouvrir : **Réglages Système → Confidentialité et sécurité → Ouvrir quand même**, ou compile avec `make`. Compiler en local est le chemin propre.
 
 Puis Serato → **Setup** → **CD/Vinyl**. Vinyle de contrôle sur une platine branchée en **CH3 PHONO** (et CH4 pour deux decks DVS). Tourner. Calibrer.
 
