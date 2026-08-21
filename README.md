@@ -1,5 +1,7 @@
 # ddj-sz-routing
 
+Made with love by **Damien RICHARD / Kapweb**.
+
 **The DDJ-SZ is not dead. Pioneer just stopped showing up.**
 
 A 4-channel battle mixer, real PHONO preamps, two DVS decks, and a chassis that still feels like a tank. Audio, MIDI and the controller still work on a current Mac — including Apple Silicon and macOS Tahoe. What died is the one tiny switch Serato needs: USB inputs CH3 and CH4 set to **Control Tone PHONO**.
@@ -176,6 +178,8 @@ Values come from Pioneer’s own tables. The tool opens the device with IOKit (`
 
 **Need:** macOS, DDJ-SZ on USB, Pioneer **DDJ-SZ USB audio** driver already installed (the one Serato uses), [Xcode Command Line Tools](https://developer.apple.com/xcode/resources/).
 
+**Tested and validated only on:** MacBook with Apple M3, macOS Tahoe 26.5.2, Pioneer DDJ-SZ, Serato DJ Pro 4.0.9. Other Macs, macOS versions, mixers or Serato builds are untested.
+
 ---
 
 ## License
@@ -185,6 +189,8 @@ MIT. See [LICENSE](LICENSE).
 Pioneer, DDJ-SZ, Serato and related names are trademarks of their owners. This project is not affiliated with AlphaTheta / Pioneer DJ or Serato.
 
 Use at your own risk. Only the normal Setting Utility routing is changed.
+
+Made with love by Damien RICHARD / Kapweb.
 
 ---
 
@@ -237,3 +243,5 @@ Si tu vois `writes were sent but GET did not confirm` : le write USB est parti, 
 `learn` ne devine rien. Il lit les tables du framework officiel (`PioneerDDJSetup`). Ça couvre le SZ et quelques DJM de la même époque. **Pas le DDJ-SZ2** (`VID 0x2b73`) — autre produit, autre stack. On n’invente pas ses writes.
 
 Prérequis : macOS, DDJ-SZ branché, driver audio Pioneer déjà installé, Command Line Tools (`clang`, `make`).
+
+**Testé et validé uniquement sur :** Mac Apple M3, macOS Tahoe 26.5.2, Pioneer DDJ-SZ, Serato DJ Pro 4.0.9. Tout autre Mac, version de macOS, table ou build Serato n’a pas été testé.
