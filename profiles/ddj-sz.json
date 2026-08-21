@@ -1,0 +1,99 @@
+{
+  "name": "Pioneer DDJ-SZ",
+  "vendor_id": "0x08e4",
+  "product_id": "0x0191",
+  "protocol": "pioneer_mixer_select",
+  "notes": "Values from official PioneerDDJSetup tables. Do not invent writes.",
+  "get": {
+    "bmRequestType": "0xC0",
+    "bRequest": "0x00",
+    "wValue": "0x0000",
+    "wIndex": "0x8002",
+    "wLength": 6,
+    "channel_byte_offset": 1
+  },
+  "set": {
+    "bmRequestType": "0x40",
+    "bRequest": "0x03",
+    "wIndex": "0x8002",
+    "wLength": 0
+  },
+  "firmware": {
+    "bmRequestType": "0xC0",
+    "bRequest": "0x00",
+    "wValue": "0x0000",
+    "wIndex": "0x8001",
+    "wLength": 2
+  },
+  "slots": [
+    {
+      "id": "CH1",
+      "labels": [
+        "CH1 Control Tone CD",
+        "Post CH1 Fader",
+        "Cross Fader A",
+        "Cross Fader B",
+        "MIC"
+      ]
+    },
+    {
+      "id": "CH2",
+      "labels": [
+        "CH2 Control Tone CD",
+        "Post CH2 Fader",
+        "Cross Fader A",
+        "Cross Fader B",
+        "MIC"
+      ]
+    },
+    {
+      "id": "CH3",
+      "labels": [
+        "CH3 Control Tone PHONO",
+        "CH3 Control Tone LINE",
+        "Post CH3 Fader",
+        "Cross Fader A",
+        "Cross Fader B",
+        "MIC"
+      ]
+    },
+    {
+      "id": "CH4",
+      "labels": [
+        "CH4 Control Tone PHONO",
+        "CH4 Control Tone LINE",
+        "Post CH4 Fader",
+        "Cross Fader A",
+        "Cross Fader B",
+        "MIC"
+      ]
+    },
+    {
+      "id": "USB 9-10",
+      "labels": [
+        "MIX(REC OUT)",
+        "Cross Fader A",
+        "Cross Fader B",
+        "MIC",
+        "Post CH1 Fader",
+        "Post CH2 Fader",
+        "Post CH3 Fader",
+        "Post CH4 Fader"
+      ]
+    }
+  ],
+  "dvs": [
+    {
+      "slot": "CH3",
+      "label": "Control Tone PHONO",
+      "wValue": "0x0303",
+      "expect_index": 0
+    },
+    {
+      "slot": "CH4",
+      "label": "Control Tone PHONO",
+      "wValue": "0x0403",
+      "expect_index": 0
+    }
+  ]
+}
